@@ -1,8 +1,8 @@
 <?php
 $bdServidor = "localhost"; 
 $bdUsuario = "root"; 
-$bdSenha = "D4ll4n0r@"; 
-$bdBanco = "tcc";
+$bdSenha = ""; 
+$bdBanco = "cria";
 
 $conexao = mysqli_connect($bdServidor, $bdUsuario, $bdSenha, $bdBanco);
 
