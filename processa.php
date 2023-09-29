@@ -9,7 +9,7 @@ if (isset($_POST['cadastrar'])) {
     $contato = $_POST['contato'];
 
 
-    $sql = "INSERT INTO children (nome, idade, sexo, responsavel, contato_responsa) VALUES ('$nome','$idade', '$sexo', '$responsavel', '$contato')";
+    $sql = "INSERT INTO children (nome, idade, sexo, responsavel, contato_resp) VALUES ('$nome','$idade', '$sexo', '$responsavel', '$contato')";
     mysqli_query($conexao, $sql);
     header("Location:principal.php");
 }
@@ -22,7 +22,7 @@ if (isset($_POST['editar'])) {
     $responsavel = $_POST['responsavel'];
     $contato = $_POST['contato'];
 
-    $sql = "UPDATE children SET nome='$nome', idade='$idade', sexo='$sexo', responsavel='$responsavel', contato='$contato'  WHERE ID=$ID";
+    $sql = "UPDATE children SET nome='$nome', idade='$idade', sexo='$sexo', responsavel='$responsavel', contato_resp='$contato'  WHERE ID=$ID";
     mysqli_query($conexao, $sql);
     header("Location:principal.php");
 }

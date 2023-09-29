@@ -12,7 +12,6 @@
     <?php include_once('processa.php'); ?>
 
     <?php
-    // Seleciona todos os dados da tabela contatos 
     $sql = "SELECT * FROM children";
 
     // Executa o Select
@@ -23,7 +22,7 @@
 
     <a href="cadCria.php"> Cadastrar </a>
     <hr>
-    <table border=1>
+    <table>
         <thead>
             <tr>
                 <th> <b>Nome</b> </th>
