@@ -14,7 +14,7 @@
     $resultado = mysqli_query($conexao, $sql);
     ?>
     <h1> Lista de Crianças </h1>
-    <button class="btn btn-danger" href="cadCria.php">Cadastrar</button>
+    <button class="btn btn-dark" ><a href="cadCria.php">Cadastrar</a></button>
     <hr>
     <table>
         <thead>

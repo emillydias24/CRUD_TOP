@@ -9,9 +9,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
     <title>Cadastrar Criança</title>
 </head>
-<body>
-    <div class="container-sm my-5 p-5 border text-center text-bg-light rounded" style="background:pink;">
-        <p class="h4 p-3 w-50 text-dark mx-auto shadow rounded"> Cadastro de Criança </p>
+<body style="background-image: url('fundo.png');background-size:cover; background-repeat:no-repeat; background-attachment: fixed;">
+    <div class="container mt-5">
+        <div class="text-center">         
+    </div>
+    <div class="container-sm my-5 p-5 border text-center rounded jumbotron" style="margin-bottom:0; background-color:#de7cba;">
+        <p class="h4 p-3 w-50 text-bg-light mx-auto shadow rounded"> Cadastro de Criança </p>
         <form action="processa.php" method="POST">
             <div class="form-group">
                 <label for="responsavel">Nome : </label>
@@ -49,7 +52,7 @@
                 <input type="text" id="contato" name="contato_resp" class="form-input m-3"> 
             </div>
             <div class="form-group">
-                <button class="btn btn-success m-3" type="submit" name="cadastrar" class="form-input">Cadastrar Criança</button>
+                <button class="btn btn-light m-3" type="submit" name="cadastrar" class="form-input">Cadastrar Criança</button>
             </div>
         </form>
     </div>
