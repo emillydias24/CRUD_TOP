@@ -1,3 +1,13 @@
+<?php include_once('processa.php'); ?>
+
+    <?php
+    // Seleciona todos os dados da tabela contatos 
+    $sql = "SELECT * FROM  children";
+
+    // Executa o Select
+    $resultado = mysqli_query($conexao, $sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,17 +35,17 @@
                 <h3 class="text-light">Para prosseguir sua viagem, é necessário cadastrar seu E-mail e sua senha!</h3>
                 <h5 class="text-light">Lembrando que o E-mail e senha do usuário é do responsável da crinça que será posteriormente cadastrada no sistema!</h5>
                     <form method="POST" action="cadCria.php" class="form-group">
-                <div class="form-group">
-                    <label  class="text-light"> E-mail </label>
+                <div class="form-group mt-5">
+                    <label  class="text-light mt-5"> E-mail </label>
                     <input class="form-control" type="text" name="email" required="required" />
                 </div>
 
-                <div class="form-group">
-                    <label  class="text-light"> Senha </label>
+                <div class="form-group mt-5">
+                    <label  class="text-light mt-5"> Senha </label>
                     <input class="form-control" type="password" name="senha" required="required" />
                 </div>
 
-                <input class="btn btn-light" type="submit" role="button" name="logar" value="Concluir"/>
+                <input class="btn btn-light" type="submit" role="button" name="logar" value="cadastrar"/>
 
               </form>
         </div>

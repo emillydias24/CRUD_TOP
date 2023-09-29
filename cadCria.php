@@ -12,7 +12,7 @@
 <body>
     <div class="container-sm my-5 p-5 border text-center text-bg-light rounded" style="background-color:pink;">
         <p class="h4 p-3 w-50 text-dark mx-auto shadow rounded"> Cadastro de Criança </p>
-        <form action="processo.php" method="POST">
+        <form action="processa.php" method="POST">
             <div class="form-group">
                 <label for="responsavel">Nome : </label>
                 <input type="text" name="nome" class="form-input m-3" /> 
