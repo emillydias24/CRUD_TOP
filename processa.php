@@ -6,10 +6,10 @@ if (isset($_POST['cadastrar'])) {
     $idade = $_POST['idade'];
     $sexo = $_POST['sexo'];
     $responsavel = $_POST['responsavel'];
-    $contato = $_POST['contato'];
+    $contato_resp = $_POST['contato_resp'];
 
 
-    $sql = "INSERT INTO children (nome, idade, sexo, responsavel, contato_resp) VALUES ('$nome','$idade', '$sexo', '$responsavel', '$contato')";
+    $sql = "INSERT INTO children (nome, idade, sexo, responsavel, contato_resp) VALUES ('$nome','$idade', '$sexo', '$responsavel', '$contato_resp')";
     mysqli_query($conexao, $sql);
     header("Location:principal.php");
 }
@@ -20,9 +20,9 @@ if (isset($_POST['editar'])) {
     $idade = $_POST['idade'];
     $sexo = $_POST['sexo'];
     $responsavel = $_POST['responsavel'];
-    $contato = $_POST['contato'];
+    $contato_resp = $_POST['contato_resp'];
 
-    $sql = "UPDATE children SET nome='$nome', idade='$idade', sexo='$sexo', responsavel='$responsavel', contato_resp='$contato'  WHERE ID=$ID";
+    $sql = "UPDATE children SET nome='$nome', idade='$idade', sexo='$sexo', responsavel='$responsavel', contato_resp='$contato_resp'  WHERE ID=$ID";
     mysqli_query($conexao, $sql);
     header("Location:principal.php");
 }
