@@ -45,7 +45,7 @@
             </div>
             <div class="form-group">
                 <label for="responsavel">Contato do Responsável : </label>
-                <input type="text" id="contato" name="responsavel" class="form-input m-3"> 
+                <input type="text" id="contato" name="contato" class="form-input m-3"> 
             </div>
             <div class="form-group">
                 <button class="btn btn-success m-3" type="submit" name="cadastrar" class="form-input">Cadastrar Criança</button>
