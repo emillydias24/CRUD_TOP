@@ -10,7 +10,7 @@
     <title>Cadastrar Criança</title>
 </head>
 <body>
-    <div class="container-sm my-5 p-5 border text-center text-bg-light rounded" style="background-color:pink;">
+    <div class="container-sm my-5 p-5 border text-center text-bg-light rounded" style="background:pink;">
         <p class="h4 p-3 w-50 text-dark mx-auto shadow rounded"> Cadastro de Criança </p>
         <form action="processa.php" method="POST">
             <div class="form-group">
@@ -21,11 +21,23 @@
                 <label for="responsavel">Idade : </label>
                 <input type="number" name="idade" class="form-input m-3" /> 
             </div>
-            <div class="form-group">
-                <label for="sexo"> Gênero : </label>
-                <input type="radio" name="sexo" class="form-input m-3" value="boy" />Garoto
-                <input type="radio" name="sexo" class="form-input m-3" value="girl" />Garota
-                <input type="radio" name="sexo" class="form-input m-3" value="other" />Outro
+            <div class="form-check-inline">
+                <label class="form-check-label"> Gênero : </label>
+            </div>
+            <div class="form-check-inline">
+                <label class="form-check-label">  
+                    <input type="radio" name="sexo" class="form-check-input m-3" value="boy" />Garoto
+                </label>
+            </div>
+            <div class="form-check-inline">
+                <label class="form-check-label"> 
+                    <input type="radio" name="sexo" class="form-check-input m-3" value="girl" />Garota 
+                </label>        
+            </div>
+            <div class="form-check-inline">        
+                <label class="form-check-label"> 
+                    <input type="radio" name="sexo" class="form-check-input m-3" value="other" />Outro
+                </label>
             </div>
             <div class="form-group">
                 <label for="responsavel">Nome do Responsável :</label>
@@ -40,10 +52,10 @@
             </div>
         </form>
     </div>
-    <script>
+    <!--<script>
         $(document).ready(function(){
             $('#contato').mask('(00) 00000-0000');
         });
-    </script>
+    </script>-->
 </body>
 </html>
