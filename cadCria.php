@@ -18,11 +18,11 @@
         <form action="processa.php" method="POST">
             <div class="form-group">
                 <label for="responsavel">Nome : </label>
-                <input type="text" name="nome" class="form-input m-3" /> 
+                <input type="text" name="nome" class="form-input m-3 rounded" /> 
             </div>
             <div class="form-group">
                 <label for="responsavel">Idade : </label>
-                <input type="number" name="idade" class="form-input m-3" /> 
+                <input type="number" name="idade" class="form-input m-3 rounded" /> 
             </div>
             <div class="form-check-inline">
                 <label class="form-check-label"> Gênero : </label>
@@ -43,13 +43,12 @@
                 </label>
             </div>
             <div class="form-group">
-                <label for="responsavel">Nome do 
-                     :</label>
-                <input type="text" name="responsavel" class="form-input m-3"> 
+                <label for="responsavel">Nome do Responsável: </label>
+                <input type="text" name="responsavel" class="form-input m-3 rounded"> 
             </div>
             <div class="form-group">
                 <label for="responsavel">Contato do Responsável : </label>
-                <input type="text" id="contato" name="contato_resp" class="form-input m-3"> 
+                <input type="text" id="contato" name="contato_resp" class="form-input m-3  rounded"> 
             </div>
             <div class="form-group">
                 <button class="btn btn-light m-3" type="submit" name="cadastrar" class="form-input">Cadastrar Criança</button>

@@ -9,33 +9,40 @@
     <title>Crianças</title>
 </head>
 <body>
+<div class="container-sm my-5 p-3 border text-center rounded shadow" style="background-color:#de7cba;">
     <?php include_once('processa.php');
     $sql = "SELECT * FROM children";
     $resultado = mysqli_query($conexao, $sql);
     ?>
-    <h1> Lista de Crianças </h1>
-    <button class="btn btn-dark" ><a href="cadCria.php">Cadastrar</a></button>
+    <div class="row mt-3 text-center">
+        <div class="col">
+            <p class="mt-2 h3"> <i>Lista de Crianças</i> </p>
+        </div>
+        <div class="col">
+            <button class="btn btn-light m-2"><a href="cadCria.php" class="text-decoration-none text-dark">Cadastrar Nova</a></button>
+        </div>
+    </div>
     <hr>
-    <table>
-        <thead>
-            <tr>
-                <th> <b>Nome</b> </th>
-                <th> <b>Idade</b> </th>
-                <th> <b>Gênero</b> </th>
-                <th> <b>Responsável</b> </th>
-                <th> <b>Contato do responsável</b> </th>
-                <th colspan="2"> <b>Opções</b> </th>
-            </tr>
-        </thead>
-        <tbody>
-        <?php while ($dados = mysqli_fetch_assoc($resultado)) : ?>
-            <tr>
+    <div class='rounded table-responsive text-center m-3'>
+		<table class='table table-light table-hover shadow'>
+            <thead class='table-light text-bg-light'>
+                <tr>
+                    <th> Nome </th>
+                    <th> Idade </th>
+                    <th> Gênero </th>
+                    <th> Responsável </th>
+                    <th> Contato do responsável </th>
+                    <th colspan="2"> Opções </th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php while ($dados = mysqli_fetch_assoc($resultado)) : ?>
+                <tr>
                 <td> <?php echo $dados['nome']; ?> </td>
                 <td> <?php echo $dados['idade']; ?> </td>
                 <td> <?php echo $dados['sexo']; ?> </td>
                 <td> <?php echo $dados['responsavel']; ?> </td>
                 <td> <?php echo $dados['contato_resp']; ?> </td>
-
                 <td>
                     <a href="formEdit.php?editar=<?php echo $dados['ID']; ?>">
                         <img height='24' width='24' src='img/edit.png'> </a>
@@ -48,6 +55,7 @@
             <?php endwhile; ?>
         </tbody>
     </table>
-    <hr>
+    </div>
+</div>
 </body>
 </html>
