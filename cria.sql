@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 29-Set-2023 às 11:28
+-- Tempo de geração: 03-Out-2023 às 02:31
 -- Versão do servidor: 8.0.31
 -- versão do PHP: 8.0.26
 
@@ -30,10 +30,10 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `brinks`;
 CREATE TABLE IF NOT EXISTS `brinks` (
   `ID_brinks` int NOT NULL AUTO_INCREMENT,
-  `nome_brinks` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `regras` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `nome_brinks` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `regras` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `faixa_etaria` int NOT NULL,
-  `participantes` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `participantes` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`ID_brinks`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -48,18 +48,19 @@ CREATE TABLE IF NOT EXISTS `children` (
   `ID` int NOT NULL AUTO_INCREMENT,
   `nome` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `idade` int NOT NULL,
-  `sexo` varchar(10) COLLATE utf8mb4_general_ci NOT NULL,
-  `responsavel` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `contado_responsa` int NOT NULL,
+  `sexo` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `responsavel` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `contato_resp` varchar(16) COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Extraindo dados da tabela `children`
 --
 
-INSERT INTO `children` (`ID`, `nome`, `idade`, `sexo`, `responsavel`, `contado_responsa`) VALUES
-(3, 'Bianca', 6, 'Fem', 'Emilly', 66586786);
+INSERT INTO `children` (`ID`, `nome`, `idade`, `sexo`, `responsavel`, `contato_resp`) VALUES
+(9, 'Lulu', 8, 'Fem', 'Bianca', '(55) 93939-3922'),
+(10, 'Lily', 8, 'Fem', 'Emilly', '(55) 99633-2605');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

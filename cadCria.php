@@ -10,7 +10,7 @@
     <title>Cadastrar Criança</title>
 </head>
 <body style="background-image: url('fundo.png');background-size:cover; background-repeat:no-repeat; background-attachment: fixed;">
-    <div class="container-sm mt-5 p-3 w-50 text-center border rounded shadow" style="background-color:#de7cba;">
+    <div class="container-sm mt-3 p-3 w-50 text-center border rounded shadow" style="background-color:#de7cba;">
         <div class="row text-center">
             <div class="col">
                 <p class="mt-2 h3"> <i>Cadastrar Criança</i> </p>
@@ -29,11 +29,11 @@
                 <label for="responsavel"> <b>Idade :</b> </label>
                 <input type="number" name="idade" class="form-input m-3 rounded" /> 
             </div>
-            <div class="form-radio">
+            <div class="form-radio m-2">
                 <label class="form-check-label m-2"> <b>Gênero :</b> </label> <br>
-                <label>  <input type="radio" name="sexo" class="form-check-input m-3" value="masc" />Garoto</label> 
-                <label><input type="radio" name="sexo" class="form-check-input m-3" value="fem" />Garota </label>   
-                <label><input type="radio" name="sexo" class="form-check-input m-3" value="outro" />Outro</label>
+                <label>  <input type="radio" name="sexo" class="form-check-input m-1" value="Masc" />Garoto</label> <br>
+                <label><input type="radio" name="sexo" class="form-check-input m-1" value="Fem" />Garota</label> <br>
+                <label><input type="radio" name="sexo" class="form-check-input m-1" value="Outro" />Outros</label>
             </div>
             <div class="form-group">
                 <label for="responsavel"> <b>Nome do Responsável :</b> </label>
@@ -41,15 +41,15 @@
             </div>
             <div class="form-group">
                 <label for="responsavel"> <b>Contato do Responsável :</b> </label>
-                <input type="text" id="contato" name="contato_resp" class="form-input m-3  rounded"> 
+                <input type="text" id="contato" name="contato_resp" class="form-input m-3 rounded"> 
             </div>
                 <button class="btn btn-light mt-5" type="submit" name="cadastrar" class="form-input">Cadastrar</button>
         </form>
     </div>
-    <!--<script>
+    <script>
         $(document).ready(function(){
             $('#contato').mask('(00) 00000-0000');
         });
-    </script>-->
+    </script>
 </body>
 </html>

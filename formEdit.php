@@ -15,11 +15,12 @@ $dados = mysqli_fetch_assoc($resultado);
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-    <title>Editar</title>
+    <title>Editar Criança</title>
 </head>
-<body>
-<div class="container-sm mt-5 p-3 w-50 text-center border rounded shadow" style="background-color:#de7cba;">
-        <div class="row text-center">
+<body style="background-image: url('fundo.png');background-size:cover; background-repeat:no-repeat; background-attachment: fixed;">
+>
+<div class="container-sm mt-3 p-3 w-50 text-center border rounded shadow" style="background-color:#de7cba;">
+        <div class="row">
             <div class="col">
                 <p class="mt-2 h3"> <i>Editar Criança</i> </p>
             </div>
@@ -38,11 +39,11 @@ $dados = mysqli_fetch_assoc($resultado);
                 <label> <b>Idade :</b> </label>
                 <input type="text" name="nome" class="form-input m-3 rounded" value="<?php echo $dados['idade']; ?>" /> 
             </div>
-            <div class="form-radio">
+            <div class="form-radio m-2">
                 <label class="form-check-label m-2"> <b>Gênero :</b> </label> <br>
-                <label>  <input type="radio" name="sexo" class="form-check-input m-3" value="masc" />Garoto</label> 
-                <label><input type="radio" name="sexo" class="form-check-input m-3" value="fem" />Garota </label>   
-                <label><input type="radio" name="sexo" class="form-check-input m-3" value="outro" />Outro</label>
+                <label> <input type="radio" name="sexo" class="form-check-input m-1" value="Masc" <?php if ($dados['sexo'] == "Masc") echo "checked"; ?>/> Garoto  </label> <br>
+                <label><input type="radio" name="sexo" class="form-check-input m-1" value="Fem" <?php if ($dados['sexo'] == "Fem") echo "checked"; ?> /> Garota  </label>   <br>
+                <label><input type="radio" name="sexo" class="form-check-input m-1" value="Outro" <?php if ($dados['sexo'] == "Outros") echo "checked"; ?>/> Outros  </label>
             </div>
             <div class="form-group">
                 <label> <b>Nome do Responsável :</b> </label>
@@ -50,10 +51,15 @@ $dados = mysqli_fetch_assoc($resultado);
             </div>
             <div class="form-group">
                 <label for="responsavel"> <b>Contato do Responsável :</b> </label>
-                <input type="text" name="nome" class="form-input m-3 rounded" id="contato" value="<?php echo $dados['contato_resp']; ?>" /> 
+                <input type="text" name="nome" id="contato" class="form-input m-3 rounded" id="contato" value="<?php echo $dados['contato_resp']; ?>" /> 
             </div>
                 <button class="btn btn-light mt-5" type="submit" name="editar" class="form-input">Editar</button>
         </form>
     </div>
+    <script>
+        $(document).ready(function(){
+            $('#contato').mask('(00) 00000-0000');
+        });
+    </script>
 </body>
 </html>
