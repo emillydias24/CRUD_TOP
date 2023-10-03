@@ -9,7 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
     <title>Cadastrar Criança</title>
 </head>
-<body style="background-image: url('fundo.png');background-size:cover; background-repeat:no-repeat; background-attachment: fixed;">
+<body style="background-image: url('./img/fundo.png');background-size:cover; background-repeat:no-repeat; background-attachment: fixed;">
     <div class="container-sm mt-3 p-3 w-50 text-center border rounded shadow" style="background-color:#de7cba;">
         <div class="row text-center">
             <div class="col">
@@ -22,26 +22,30 @@
         <hr>
         <form action="processaC.php" method="POST">
             <div class="form-group">
-                <label for="responsavel"> <b>Nome :</b> </label>
+                <label> <b>Nome :</b> </label>
                 <input type="text" name="nome" class="form-input m-3 rounded" /> 
             </div>
             <div class="form-group">
-                <label for="responsavel"> <b>Idade :</b> </label>
+                <label> <b>Idade :</b> </label>
                 <input type="number" name="idade" class="form-input m-3 rounded" /> 
             </div>
             <div class="form-radio m-2">
                 <label class="form-check-label m-2"> <b>Gênero :</b> </label> <br>
-                <label><input type="radio" name="sexo" class="form-check-input m-1" value="Masc" />Garoto</label> <br>
-                <label><input type="radio" name="sexo" class="form-check-input m-1" value="Fem" />Garota</label> <br>
+                <label><input type="radio" name="sexo" class="form-check-input m-1" value="Masc" />Menino</label> <br>
+                <label><input type="radio" name="sexo" class="form-check-input m-1" value="Fem" />Menina</label> <br>
                 <label><input type="radio" name="sexo" class="form-check-input m-1" value="Outro" />Outros</label>
             </div>
             <div class="form-group">
-                <label for="responsavel"> <b>Nome do Responsável :</b> </label>
+                <label> <b>Escola :</b> </label>
+                <input type="text" name="escola" class="form-input m-3 rounded" /> 
+            </div>
+            <div class="form-group">
+                <label> <b>Nome do Responsável :</b> </label>
                 <input type="text" name="responsavel" class="form-input m-3 rounded"> 
             </div>
             <div class="form-group">
-                <label for="responsavel"> <b>Contato do Responsável :</b> </label>
-                <input type="text" id="contato" name="contato_resp" class="form-input m-3 rounded"> 
+                <label> <b>Contato do Responsável :</b> </label>
+                <input type="text" name="contato_resp" id="contato" class="form-input m-3 rounded"> 
             </div>
                 <button class="btn btn-light mt-5" type="submit" name="cadastrar" class="form-input">Cadastrar</button>
         </form>

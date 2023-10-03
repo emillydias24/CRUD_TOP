@@ -23,7 +23,7 @@
             <button class="btn btn-light m-2"><a href="cadCria.php" class="text-decoration-none text-dark">Cadastrar Criança</a></button>
         </div>
         <div class="col-6 mt-3">
-            <button class="btn btn-light m-2"><a href="visuBrinks.php" class="text-decoration-none text-dark">Brincadeiras</a></button>
+            <button class="btn btn-light m-2"><a href="./Brincadeiras/visuBrinks.php" class="text-decoration-none text-dark">Brincadeiras</a></button>
         </div>
     </div>
     <hr>
@@ -35,6 +35,7 @@
                     <th> Nome </th>
                     <th> Idade </th>
                     <th> Gênero </th>
+                    <th> Escola </th>
                     <th> Responsável </th>
                     <th> Contato do responsável </th>
                     <th colspan="2"> Opções </th>
@@ -46,6 +47,7 @@
                 <td> <?php echo $dados['nome']; ?> </td>
                 <td> <?php echo $dados['idade']; ?> </td>
                 <td> <?php echo $dados['sexo']; ?> </td>
+                <td> <?php echo $dados['escola']; ?> </td>
                 <td> <?php echo $dados['responsavel']; ?> </td>
                 <td> <?php echo $dados['contato_resp']; ?> </td>
                 <td>

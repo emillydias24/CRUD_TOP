@@ -17,7 +17,7 @@ $dados = mysqli_fetch_assoc($resultado);
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
     <title>Editar Criança</title>
 </head>
-<body style="background-image: url('fundo.png');background-size:cover; background-repeat:no-repeat; background-attachment: fixed;">
+<body style="background-image: url('../img/bg-brinks.webp');background-size:cover; background-repeat:no-repeat; background-attachment: fixed;">
 <div class="container-sm mt-3 p-3 w-50 text-center bg-info border rounded shadow">
         <div class="row">
             <div class="col">
@@ -40,10 +40,10 @@ $dados = mysqli_fetch_assoc($resultado);
             </div>
             <div class="form-radio m-2">
                 <label class="form-check-label m-2"> <b>Faixa Etária :</b> </label> <br>
-                <label> <input type="radio" name="faixa_etaria" class="form-check-input m-1" value="2-5" <?php if ($dados['faixa_etaria'] == "2-5") echo "checked"; ?>/> 2-5 anos  </label> <br>
-                <label><input type="radio" name="faixa_etaria" class="form-check-input m-1" value="5-7" <?php if ($dados['faixa_etaria'] == "5-7") echo "checked"; ?> /> 5-7 anos  </label>   <br>
-                <label><input type="radio" name="faixa_etaria" class="form-check-input m-1" value="7-10" <?php if ($dados['faixa_etaria'] == "7-10") echo "checked"; ?>/> 7-10 anos  </label> <br>
-                <label><input type="radio" name="faixa_etaria" class="form-check-input m-1" value="PA" <?php if ($dados['faixa_etaria'] == "PA") echo "checked"; ?>/> Pré Adolescente </label>
+                <label> <input type="radio" name="faixa_etaria" class="form-check-input m-1" value="2-5" <?php if ($dados['faixa_etaria'] == "2-5") echo "checked"; ?>/> 2 à 5 anos  </label> <br>
+                <label><input type="radio" name="faixa_etaria" class="form-check-input m-1" value="5-8" <?php if ($dados['faixa_etaria'] == "5-8") echo "checked"; ?> /> 5 à 8 anos  </label>   <br>
+                <label><input type="radio" name="faixa_etaria" class="form-check-input m-1" value="8-11" <?php if ($dados['faixa_etaria'] == "8-11") echo "checked"; ?>/> 8 à 11 anos  </label> <br>
+                <label><input type="radio" name="faixa_etaria" class="form-check-input m-1" value="Livre" <?php if ($dados['faixa_etaria'] == "Livre") echo "checked"; ?>/> Livre </label>
             </div>
             <div class="form-group">
                 <label> <b>Número de participantes :</b> </label>
