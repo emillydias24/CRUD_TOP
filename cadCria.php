@@ -31,9 +31,9 @@
             </div>
             <div class="form-radio">
                 <label class="form-check-label m-2"> <b>Gênero :</b> </label> <br>
-                <label>  <input type="radio" name="sexo" class="form-check-input m-3" value="boy" />Garoto</label> 
-                <label><input type="radio" name="sexo" class="form-check-input m-3" value="girl" />Garota </label>   
-                <label><input type="radio" name="sexo" class="form-check-input m-3" value="other" />Outro</label>
+                <label>  <input type="radio" name="sexo" class="form-check-input m-3" value="masc" />Garoto</label> 
+                <label><input type="radio" name="sexo" class="form-check-input m-3" value="fem" />Garota </label>   
+                <label><input type="radio" name="sexo" class="form-check-input m-3" value="outro" />Outro</label>
             </div>
             <div class="form-group">
                 <label for="responsavel"> <b>Nome do Responsável :</b> </label>
