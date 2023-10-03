@@ -16,7 +16,7 @@
                 <p class="mt-2 h3"> <i>Cadastrar Criança</i> </p>
             </div>
             <div class="col">
-                <button class="btn btn-light m-2"><a href="../index.php" class="text-decoration-none text-dark">Voltar</a></button>
+                <button class="btn btn-light m-2"><a href="index.php" class="text-decoration-none text-dark">Voltar</a></button>
             </div>
         </div>
         <hr>
@@ -31,7 +31,7 @@
             </div>
             <div class="form-radio m-2">
                 <label class="form-check-label m-2"> <b>Gênero :</b> </label> <br>
-                <label>  <input type="radio" name="sexo" class="form-check-input m-1" value="Masc" />Garoto</label> <br>
+                <label><input type="radio" name="sexo" class="form-check-input m-1" value="Masc" />Garoto</label> <br>
                 <label><input type="radio" name="sexo" class="form-check-input m-1" value="Fem" />Garota</label> <br>
                 <label><input type="radio" name="sexo" class="form-check-input m-1" value="Outro" />Outros</label>
             </div>

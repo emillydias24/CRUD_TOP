@@ -24,18 +24,18 @@
                 <input type="text" name="nome_brinks" class="form-input m-3 rounded" /> 
             </div>
             <div class="form-group">
-                <label > <b>Regras :</b> </label>
-                <textarea type="text" name="regras" class="form-input m-3 mt-3 rounded"></textarea> 
+                <label> <b>Regras :</b> </label>
+                <input type="text" name="regras" class="form-input m-3 mt-3 rounded" /> 
             </div>
             <div class="form-radio m-2">
                 <label class="form-check-label m-2"> <b>Faixa Etária :</b> </label> <br>
-                <label>  <input type="radio" name="faixa_etaria" class="form-check-input m-1" value="2-5" />2 - 5 anos</label> <br>
+                <label><input type="radio" name="faixa_etaria" class="form-check-input m-1" value="2-5" />2 - 5 anos</label> <br>
                 <label><input type="radio" name="faixa_etaria" class="form-check-input m-1" value="5-7" />5 - 7 anos</label> <br>
                 <label><input type="radio" name="faixa_etaria" class="form-check-input m-1" value="7-10" />7 - 10 anos</label> <br>
-                <label><input type="radio" name="faixa_etaria" class="form-check-input m-1" value="Outro" />Pré Adolescente</label>
+                <label><input type="radio" name="faixa_etaria" class="form-check-input m-1" value="PA" />Pré Adolescente</label>
             </div>
             <div class="form-group">
-                <label> <b>Participantes :</b> </label>
+                <label> <b>Número de participantes :</b> </label>
                 <input type="text" name="participantes" class="form-input m-3 rounded"> 
             </div>
                 <button class="btn btn-light mt-5" type="submit" name="cadastrar" class="form-input">Cadastrar</button>

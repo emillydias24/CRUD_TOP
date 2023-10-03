@@ -13,13 +13,13 @@ if (isset($_POST['cadastrar'])) {
 }
 
 if (isset($_POST['editar'])) {
-    $ID = $_POST['ID_brinks'];
+    $ID_brinks = $_POST['ID_brinks'];
     $nome_brinks = $_POST['nome_brinks'];
     $regras = $_POST['regras'];
     $faixa_etaria = $_POST['faixa_etaria'];
     $participantes = $_POST['participantes'];
 
-    $sql = "UPDATE children 
+    $sql = "UPDATE brinks 
     SET nome_brinks='$nome_brinks', regras='$regras', faixa_etaria='$faixa_etaria', participantes='$participantes'  
     WHERE ID_brinks=$ID_brinks";
     mysqli_query($conexao, $sql);

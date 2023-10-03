@@ -35,7 +35,7 @@
                     <th> Nome </th>
                     <th> Regras </th>
                     <th> Faixa Etária </th>
-                    <th> Participantes </th>
+                    <th> Número de participantes </th>
                     <th colspan="2"> Opções </th>
                 </tr>
             </thead>

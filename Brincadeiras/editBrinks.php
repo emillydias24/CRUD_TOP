@@ -1,7 +1,7 @@
 <?php
 include_once("../conecta.php");
 $ID = $_GET['editar'];
-$sql = "SELECT * FROM children WHERE ID=" . $ID;
+$sql = "SELECT * FROM brinks WHERE ID_brinks=" . $ID;
 $resultado = mysqli_query($conexao, $sql);
 $dados = mysqli_fetch_assoc($resultado);
 ?>
@@ -42,11 +42,11 @@ $dados = mysqli_fetch_assoc($resultado);
                 <label class="form-check-label m-2"> <b>Faixa Etária :</b> </label> <br>
                 <label> <input type="radio" name="faixa_etaria" class="form-check-input m-1" value="2-5" <?php if ($dados['faixa_etaria'] == "2-5") echo "checked"; ?>/> 2-5 anos  </label> <br>
                 <label><input type="radio" name="faixa_etaria" class="form-check-input m-1" value="5-7" <?php if ($dados['faixa_etaria'] == "5-7") echo "checked"; ?> /> 5-7 anos  </label>   <br>
-                <label><input type="radio" name="faixa_etaria" class="form-check-input m-1" value="7-10" <?php if ($dados['faixa_etaria'] == "7-10") echo "checked"; ?>/> 7-10 anos  </label>
-                <label><input type="radio" name="faixa_etaria" class="form-check-input m-1" value="Outro" <?php if ($dados['faixa_etaria'] == "Outro") echo "checked"; ?>/> Outro </label>
+                <label><input type="radio" name="faixa_etaria" class="form-check-input m-1" value="7-10" <?php if ($dados['faixa_etaria'] == "7-10") echo "checked"; ?>/> 7-10 anos  </label> <br>
+                <label><input type="radio" name="faixa_etaria" class="form-check-input m-1" value="PA" <?php if ($dados['faixa_etaria'] == "PA") echo "checked"; ?>/> Pré Adolescente </label>
             </div>
             <div class="form-group">
-                <label> <b>Participantes :</b> </label>
+                <label> <b>Número de participantes :</b> </label>
                 <input type="text" name="participantes" class="form-input m-3 rounded" value="<?php echo $dados['participantes']; ?>" /> 
             </div>
                 <button class="btn btn-light mt-5" type="submit" name="editar" class="form-input">Editar</button>

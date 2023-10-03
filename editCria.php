@@ -1,5 +1,5 @@
 <?php
-include_once("../conecta.php");
+include_once('conecta.php');
 $ID = $_GET['editar'];
 $sql = "SELECT * FROM children WHERE ID=" . $ID;
 $resultado = mysqli_query($conexao, $sql);
@@ -25,7 +25,7 @@ $dados = mysqli_fetch_assoc($resultado);
                 <p class="mt-2 h3"> <i>Editar Criança</i> </p>
             </div>
             <div class="col">
-                <button class="btn btn-light m-2"><a href="../index.php" class="text-decoration-none text-dark">Voltar</a></button>
+                <button class="btn btn-light m-2"><a href="index.php" class="text-decoration-none text-dark">Voltar</a></button>
             </div>
         </div>
         <hr>
@@ -43,7 +43,7 @@ $dados = mysqli_fetch_assoc($resultado);
                 <label class="form-check-label m-2"> <b>Gênero :</b> </label> <br>
                 <label> <input type="radio" name="sexo" class="form-check-input m-1" value="Masc" <?php if ($dados['sexo'] == "Masc") echo "checked"; ?>/> Garoto  </label> <br>
                 <label><input type="radio" name="sexo" class="form-check-input m-1" value="Fem" <?php if ($dados['sexo'] == "Fem") echo "checked"; ?> /> Garota  </label>   <br>
-                <label><input type="radio" name="sexo" class="form-check-input m-1" value="Outro" <?php if ($dados['sexo'] == "Outros") echo "checked"; ?>/> Outros  </label>
+                <label><input type="radio" name="sexo" class="form-check-input m-1" value="Outros" <?php if ($dados['sexo'] == "Outros") echo "checked"; ?>/> Outros  </label>
             </div>
             <div class="form-group">
                 <label> <b>Nome do Responsável :</b> </label>
