@@ -1,12 +1,12 @@
 <?php
-include_once("conecta.php");
+include_once("../conecta.php");
 $ID = $_GET['editar'];
 $sql = "SELECT * FROM children WHERE ID=" . $ID;
 $resultado = mysqli_query($conexao, $sql);
 $dados = mysqli_fetch_assoc($resultado);
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PT-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,11 +25,11 @@ $dados = mysqli_fetch_assoc($resultado);
                 <p class="mt-2 h3"> <i>Editar Criança</i> </p>
             </div>
             <div class="col">
-                <button class="btn btn-light m-2"><a href="index.php" class="text-decoration-none text-dark">Voltar</a></button>
+                <button class="btn btn-light m-2"><a href="../index.php" class="text-decoration-none text-dark">Voltar</a></button>
             </div>
         </div>
         <hr>
-        <form action="processa.php" method="POST">
+        <form action="processaC.php" method="POST">
             <input type="hidden" name="ID" value="<?php echo $dados['ID']; ?>" />
             <div class="form-group">
                 <label> <b>Nome :</b> </label>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PT-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,11 +16,11 @@
                 <p class="mt-2 h3"> <i>Cadastrar Criança</i> </p>
             </div>
             <div class="col">
-                <button class="btn btn-light m-2"><a href="index.php" class="text-decoration-none text-dark">Voltar</a></button>
+                <button class="btn btn-light m-2"><a href="../index.php" class="text-decoration-none text-dark">Voltar</a></button>
             </div>
         </div>
         <hr>
-        <form action="processa.php" method="POST">
+        <form action="processaC.php" method="POST">
             <div class="form-group">
                 <label for="responsavel"> <b>Nome :</b> </label>
                 <input type="text" name="nome" class="form-input m-3 rounded" /> 
