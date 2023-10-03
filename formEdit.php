@@ -1,6 +1,5 @@
 <?php
 include_once("conecta.php");
-// pega o id vindo via get
 $ID = $_GET['editar'];
 $sql = "SELECT * FROM children WHERE ID=" . $ID;
 $resultado = mysqli_query($conexao, $sql);
@@ -38,6 +37,6 @@ $dados = mysqli_fetch_assoc($resultado);
         <button type="submit" name="editar"> Editar </button>
     </form>
     <hr>
-    <a href="principal.php"> Voltar </a>
+    <a href="index.php"> Voltar </a>
 </body>
 </html>

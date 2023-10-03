@@ -11,7 +11,7 @@ if (isset($_POST['cadastrar'])) {
 
     $sql = "INSERT INTO children (nome, idade, sexo, responsavel, contato_resp) VALUES ('$nome','$idade', '$sexo', '$responsavel', '$contato_resp')";
     mysqli_query($conexao, $sql);
-    header("Location:principal.php");
+    header("Location:index.php");
 }
 
 if (isset($_POST['editar'])) {
@@ -24,7 +24,7 @@ if (isset($_POST['editar'])) {
 
     $sql = "UPDATE children SET nome='$nome', idade='$idade', sexo='$sexo', responsavel='$responsavel', contato_resp='$contato_resp'  WHERE ID=$ID";
     mysqli_query($conexao, $sql);
-    header("Location:principal.php");
+    header("Location:index.php");
 }
 
 if (isset($_GET['deletar'])) {
@@ -32,5 +32,5 @@ if (isset($_GET['deletar'])) {
 
     $sql = "DELETE FROM children WHERE ID=$ID";
     mysqli_query($conexao, $sql);
-    header("Location:principal.php");
+    header("Location:index.php");
 }

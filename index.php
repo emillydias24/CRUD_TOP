@@ -13,16 +13,18 @@
     <?php include_once('processa.php');
     $sql = "SELECT * FROM children";
     $resultado = mysqli_query($conexao, $sql);
+    $qtLinhas = mysqli_num_rows($resultado);
     ?>
     <div class="row mt-3 text-center">
         <div class="col">
             <p class="mt-2 h3"> <i>Lista de Crianças</i> </p>
         </div>
         <div class="col">
-            <button class="btn btn-light m-2"><a href="cadCria.php" class="text-decoration-none text-dark">Cadastrar Nova</a></button>
+            <button class="btn btn-light m-2"><a href="cadCria.php" class="text-decoration-none text-dark">Cadastrar Criança</a></button>
         </div>
     </div>
     <hr>
+    <?php if($qtLinhas > 0) : ?>
     <div class='rounded table-responsive text-center m-3'>
 		<table class='table table-light table-hover shadow'>
             <thead class='table-light text-bg-light'>
@@ -53,6 +55,10 @@
                 </td>
             </tr>
             <?php endwhile; ?>
+        <?php else :
+            print "<p class='alert alert-danger m-3'>Ainda Não Há Crianças Castradas!</p>";
+        ?>
+        <?php endif; ?>
         </tbody>
     </table>
     </div>
