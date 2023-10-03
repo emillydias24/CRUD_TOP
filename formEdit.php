@@ -37,7 +37,7 @@ $dados = mysqli_fetch_assoc($resultado);
             </div>
             <div class="form-group">
                 <label> <b>Idade :</b> </label>
-                <input type="text" name="nome" class="form-input m-3 rounded" value="<?php echo $dados['idade']; ?>" /> 
+                <input type="text" name="idade" class="form-input m-3 rounded" value="<?php echo $dados['idade']; ?>" /> 
             </div>
             <div class="form-radio m-2">
                 <label class="form-check-label m-2"> <b>Gênero :</b> </label> <br>
@@ -47,16 +47,16 @@ $dados = mysqli_fetch_assoc($resultado);
             </div>
             <div class="form-group">
                 <label> <b>Nome do Responsável :</b> </label>
-                <input type="text" name="nome" class="form-input m-3 rounded" value="<?php echo $dados['responsavel']; ?>" /> 
+                <input type="text" name="responsavel" class="form-input m-3 rounded" value="<?php echo $dados['responsavel']; ?>" /> 
             </div>
             <div class="form-group">
                 <label for="responsavel"> <b>Contato do Responsável :</b> </label>
-                <input type="text" name="nome" id="contato" class="form-input m-3 rounded" id="contato" value="<?php echo $dados['contato_resp']; ?>" /> 
+                <input type="text" name="contato_resp" id="contato" class="form-input m-3 rounded" id="contato" value="<?php echo $dados['contato_resp']; ?>" /> 
             </div>
                 <button class="btn btn-light mt-5" type="submit" name="editar" class="form-input">Editar</button>
         </form>
     </div>
-    <script>
+        <script>
         $(document).ready(function(){
             $('#contato').mask('(00) 00000-0000');
         });
